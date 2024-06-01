@@ -25,3 +25,15 @@ def paginaMascotas(req):
     'mascotas': mascotas
   }
   return render(req, 'mascotas.html', context)
+
+def detalleMascota(req, id):
+  id = int(id)
+  mascota_buscada = None
+  for masc in mascotas:
+    if masc['id'] == id:
+      mascota_buscada = masc
+      break
+  context = {
+    'mascota': mascota_buscada
+  }
+  return render(req, 'detalle.html', context)
