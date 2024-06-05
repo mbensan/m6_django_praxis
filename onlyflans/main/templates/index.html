@@ -1,10 +1,28 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <div class="container">
+  <div class="container my-2">
     <h3 class="text-center text-primary">
-      Lista de Productos
+      Lista de Pasteles
     </h3>
-    
+    <div class="row">
+      <div class="col-3">
+        <div class="card">
+          <img src="https://img-global.cpcdn.com/recipes/b8d3487a3b377c0b/680x482cq70/postre-borracho-de-flan-y-vainillas-foto-principal.jpg" class="card-img-top" alt="Flan 1">
+          <div class="card-body">
+            <h5 class="card-title">Flan Borracho</h5>
+            <p class="card-text">Flan tradicional a base de pan frío</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Precio: $2000</li>
+            <li class="list-group-item">Aproveche la oferta</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link">Pedir</a>
+            <a href="#" class="card-link">Comprar</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 {% endblock %}

@@ -5,4 +5,5 @@ from main.pasteles import pasteles
 
 # Create your views here.
 def indice(req):
-  return render(req, 'index.html', {})
+  context = {'pasteles': pasteles}
+  return render(req, 'index.html', context)
