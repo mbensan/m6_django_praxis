@@ -1,8 +1,9 @@
 from django.urls import path
-from mascotas.views import paginaMascotas, detalleMascota
+from mascotas.views import crear_mascota, paginaMascotas, detalleMascota
 
 urlpatterns = [
-  path('', paginaMascotas),
-  path('home/', paginaMascotas),
-  path('<id>/', detalleMascota)
+  path('', paginaMascotas), # /pets
+  path('home/', paginaMascotas), # /pets/home
+  path('<id>/', detalleMascota), # /pets/5
+  path('create', crear_mascota)  # /pets/create
 ]

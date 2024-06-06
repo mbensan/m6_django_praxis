@@ -1,4 +1,4 @@
-from django.shortcuts import render # type: ignore
+from django.shortcuts import redirect, render # type: ignore
 from django.http import HttpResponse # type: ignore
 
 # Create your views here.
@@ -37,3 +37,8 @@ def detalleMascota(req, id):
     'mascota': mascota_buscada
   }
   return render(req, 'detalle.html', context)
+
+def crear_mascota (req):
+  print(req.POST['nombre'])
+  print(req.POST['especie'])
+  return redirect('/pets')
