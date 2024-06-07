@@ -41,4 +41,9 @@ def detalleMascota(req, id):
 def crear_mascota (req):
   print(req.POST['nombre'])
   print(req.POST['especie'])
+  nueva_mascota = {
+    'nombre': req.POST['nombre'],
+    'especie': req.POST['especie']
+  }
+  mascotas.append(nueva_mascota)
   return redirect('/pets')

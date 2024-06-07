@@ -22,4 +22,6 @@ urlpatterns = [
     path('', include('ejercicios_ruteo.urls')),
     path('', include('ejemplos.urls')),
     path('pets/', include('mascotas.urls')),
+    path('conaf/', include('conaf.urls')),
+    path('personas/', include('personas.urls')),
 ]

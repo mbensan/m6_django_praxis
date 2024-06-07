@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  {% if errores %}
+    {% for error in errores %}
+      <div class="alert">{{error}}</div>
+    {% endfor %}
+  {% endif %}
+  <form action="/contact" method="post">
+    ......
+  </form>
+{% endblock %}

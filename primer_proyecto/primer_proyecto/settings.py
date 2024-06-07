@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'ejercicios_ruteo',
     'mascotas',
+    'conaf',
+    'personas',
 ]
 
 MIDDLEWARE = [
