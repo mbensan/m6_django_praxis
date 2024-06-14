@@ -70,15 +70,15 @@
 {% block content %}
 <div class="container">
   <div class="card mt-2">
-    <h2>Login</h2>
-    <form method="post" action="{% url 'login' %}">
+    <h2>Register</h2>
+    <form method="post" action="{% url 'register' %}">
       {% csrf_token %}
       <div class="mt-2">
         {{ form }}
       </div>
       <button type="submit">Login</button>
     </form>
-    <p>Si no tiene cuenta <a href="/accounts/register">crea una</a></p>
+    <p>Si ya tienes una cuenta, <a href="/accounts/login">accede</a></p>
   </div>
 </div>
 {% endblock %}

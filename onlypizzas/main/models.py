@@ -1,5 +1,6 @@
 import uuid
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 class Pizza(models.Model):
@@ -12,3 +13,11 @@ class Pizza(models.Model):
 
   def __str__(self) -> str:
     return self.nombre
+  
+class MiUsuario(User):
+
+  def __init__(self, *args, **kwargs):
+    super(args, kwargs)
+    self.rut = models.CharField(max_length=12)
+
+
