@@ -12,15 +12,28 @@
         <li class="nav-item">
           <a class="nav-link" href="/about">Acerca de</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/welcome">Bienvenido/as</a>
-        </li>
+        {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a class="nav-link" href="/welcome">Bienvenido/as</a>
+          </li>
+        {% endif %}
 
       </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+      <div class="d-flex" role="search">
+        {% if user.is_authenticated %}
+          <span class="d-inline-block m-1 text-light">
+            Hola {{ user.username }}
+          </span>
+          <form action="{% url 'logout' %}" method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger">
+              LOGOUT
+            </button>
+          </form>
+        {% else %}
+          <a href="{% url 'login'%}" class="btn btn-primary">LOGIN</a>
+        {% endif %}
+      </div>
     </div>
   </div>
 </nav>

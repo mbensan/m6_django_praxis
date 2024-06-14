@@ -9,3 +9,6 @@ class Pizza(models.Model):
   precio = models.IntegerField(default=1000)
   imagen_url = models.URLField()
   is_private = models.BooleanField(default=False)
+
+  def __str__(self) -> str:
+    return self.nombre
